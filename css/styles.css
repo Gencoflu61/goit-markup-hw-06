@@ -850,6 +850,7 @@ input[type="checkbox"]:checked + label .checkbox-span{
     }
     .features-list{
         flex-direction: row;
+       
     }
     .features-img{
         position: absolute;
@@ -863,13 +864,7 @@ input[type="checkbox"]:checked + label .checkbox-span{
         clip: rect(0 0 0 0);
         overflow: hidden;
     }
-    .sec-top .features-list{
-        flex-direction: row; 
-    }
-     
-    .features-list li{
-        width: calc((100% - 72px) / 2);
-    }
+   
     .team-list{
         width: 264px;
         height: auto;
