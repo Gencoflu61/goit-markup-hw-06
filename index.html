@@ -11,6 +11,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.com/libraries/modern-normalize">
+    <script>
+        /*Formu Butonun İçine Hapsetmek İçin Kullanılan Js Kodu*/
+        document.addEventListener("DOMContentLoaded", function () {
+     const  modalwindow = document.querySelector(".modal-window");
+     const openModalBtn = document.querySelector(".button-text");
+     const closeModalBtn = document.querySelector(".modal-btn");
+ 
+     modalwindow.style.display = "none";
+     openModalBtn.addEventListener("click", function () {
+         modalwindow.style.display = "block";
+     });
+     closeModalBtn.addEventListener("click", function () {
+         modalwindow.style.display = "none";
+     });
+     window.addEventListener("click", function (event) {
+         if (event.target === modalwindow) {
+              modalwindow.style.display = "none";
+         }
+     });
+ });
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenu = document.querySelector(".mobile-menu-container");
+        const openMobileBtn = document.querySelector(".mobile-btn-open");
+        const closeMobileBtn = document.querySelector(".mobile-btn-close");
+        
+        mobileMenu.style.display = "none";
+        openMobileBtn.addEventListener("click", function () {
+            mobileMenu.style.display = "flex";
+        });
+        closeMobileBtn.addEventListener("click", function () {
+            mobileMenu.style.display = "none";
+        });
+    });
+     </script>
 </head>
 <body>
         <header class="header-top">
@@ -29,9 +63,70 @@
                     <li><a href="mailto:info@devstudio.com" class="address-link-body-small">info@devstudio.com</a></li>
                     <li><a href="tel:+110001111111" class="address-link-body-small">+11 (000) 111-11-11</a></li>
                 </ul>
-            </address>   
-            
+            </address> 
+            <button type="button" class="mobile-btn-open">
+                <svg class="mobile-svg-close" width="24" height="24">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu-container">
+            <div class="mobile-button">
+                <button type="button" class="mobile-btn-close">
+                    <svg class="mobile-svg-close" width="8" height="8">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="mobile-menu">
+                <ul class="mobile-menu-list">
+                    <li class="mobile-menu-list-item"><a href="">Studio</a></li>
+                    <li class="mobile-menu-list-item"><a href="">Portfolio</a></li>
+                    <li class="mobile-menu-list-item"><a href="">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="mobile-address">
+                    <ul class="mobile-contact">
+                        <li>
+                            <a href="mailto:info@devstudio.com" class="mobile-contact-list-link">info@devstudio.com</a>
+                        </li>
+                        <li>
+                            <a href="tel:+110001111111" class="mobile-contact-list-link">+11 (000) 111-11-11</a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-social-list">
+                        <li class="mobile-social-list-item">
+                            <a href="#" class="mobile-social-link">
+                                <svg width="16" height="16" class="social-svg">
+                                    <use href="./images/icons.svg#icon-instagram-2"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="mobile-social-list-item">
+                            <a href="#" class="mobile-social-link">
+                            <svg width="16" height="16" class="social-svg">
+                                <use href="./images/icons.svg#icon-facebook-1"></use>
+                            </svg>
+                        </a>
+                        </li>
+                        <li class="mobile-social-list-item">
+                            <a href="#" class="mobile-social-link">
+                                <svg width="16" height="16" class="social-svg">
+                                    <use href="./images/icons.svg#icon-Group"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="mobile-social-list-item">
+                            <a href="#" class="mobile-social-link">
+                                <svg width="16" height="16" class="social-svg">
+                                    <use href="./images/icons.svg#icon-linkedin-1"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+            </div>  
          </div>
+        
     </header>
     <main>
        <section class="sec-text">
@@ -405,7 +500,7 @@
             </div>
         </div>
     </footer>
-    <div class="modal-window">
+    <div class="modal-window" style="display: none;">
         <div class="modal-container">
             <button type="button" class="modal-btn">
                 <svg width="8" height="8" class="modal-btn-svg">
