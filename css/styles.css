@@ -25,23 +25,23 @@ img{
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
+    
     letter-spacing: 0.03em;
+    list-style: none;
     line-height: 1.17;  
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
     
 }
 .header-c{
-    display: flex;
     justify-content: space-around;
+    display: flex;
     align-items: center;
 }
 .container{
     width: 1158px;
     margin: 0 auto;
     padding: 0 15px;
-    
-
 }
 
 /* nav bölümü */
@@ -106,10 +106,12 @@ img{
 /*address bölümü*/
 .address-info{
     font-style: normal;
+    
 }
 .address-link{
     display: flex;
     gap: 40px;
+    list-style: none;
 }
 .address-link-body-small{
     font-style: normal;
@@ -669,12 +671,11 @@ input[type="checkbox"]:checked + label .checkbox-span{
     width: 264px;
 }
 /*media*/
-@media (min-width:320px){
+@media (min-width:320px) {
     .container{
         width: 320px;
         padding: 0 12px;
     }
-
     .features-img{
         position: absolute;
         width: 1px;
@@ -687,7 +688,7 @@ input[type="checkbox"]:checked + label .checkbox-span{
         clip: rect(0 0 0 0);
         overflow: hidden;
     }
-    .header-top > .container, .header-c{
+    .header-top > .container{
         width: 100%;
         padding: 16px;
     }
@@ -702,7 +703,17 @@ input[type="checkbox"]:checked + label .checkbox-span{
         display: none;
     }
     .nav-link{
-        list-style: none;
+        list-style: none; 
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
     }
     .mobile-button{
         display: flex;
@@ -800,10 +811,10 @@ input[type="checkbox"]:checked + label .checkbox-span{
     }
     .features-list  li{
         width: auto;
+       
     }
     .team-list{
-        width: 264px;
-        height: auto;
+        width: 100%;
         flex-direction: column;
     }
     .team-members img{
@@ -813,7 +824,7 @@ input[type="checkbox"]:checked + label .checkbox-span{
         width: 288px;
         height: 280px;
     }
-    .page-footer > .container, .footer-div{
+    .page-footer > .container{
         flex-direction: column;
     }
     .form-footer-box{   
@@ -828,9 +839,10 @@ input[type="checkbox"]:checked + label .checkbox-span{
         width: 768px;
         padding: 0 12px;
     }
-    .header-top > .container, .header-c{
+    
+    .header-top > .container{
         width: 100%;
-        padding: 0 12px;
+        padding: 12px;
     }
     .menu{
         display: flex;
@@ -850,7 +862,13 @@ input[type="checkbox"]:checked + label .checkbox-span{
     }
     .features-list{
         flex-direction: row;
-       
+        flex-wrap: wrap;
+        gap:72;
+        margin: 0;
+    }
+    .features-item{
+              
+        flex-basis: calc((100% - 72px) / 2);
     }
     .features-img{
         position: absolute;
@@ -864,14 +882,14 @@ input[type="checkbox"]:checked + label .checkbox-span{
         clip: rect(0 0 0 0);
         overflow: hidden;
     }
-   
     .team-list{
-        width: 264px;
-        height: auto;
-        gap:64px;
+        gap: 64;;
+        flex-wrap: wrap;
         flex-direction: row;
     }
-  
+    .team-members{
+        flex-basis: calc((100% - 72px) / 2);
+    }
     .port-item{
         flex-basis: calc((100% - 72px) / 2);
     }
@@ -887,7 +905,7 @@ input[type="checkbox"]:checked + label .checkbox-span{
     }
 }
 @media (min-width:1158px) {
-    .header-top > .container, .header-c {
+    .header-top > .container{
         width: 1158px;
     }
     .container{
@@ -896,14 +914,18 @@ input[type="checkbox"]:checked + label .checkbox-span{
     .address-link{
         flex-direction: row;
     }
+    .features-img{
+        
+    }
     .features-list li{
-        width: calc((100% - 72px) / 4);
+        flex-basis: calc((100% - 72px) / 4);
     }
     .features-list{
         margin-right: 24px;
         margin-top: 72px;
         gap:24px;
     }
+
     .team-list{
         flex-wrap: nowrap;
         gap:24px;
