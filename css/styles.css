@@ -677,16 +677,7 @@ input[type="checkbox"]:checked + label .checkbox-span{
         padding: 0 12px;
     }
     .features-img{
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        border: 0;
-        padding: 0;
-        white-space: nowrap;
-        clip-path: inset(100%);
-        clip: rect(0 0 0 0);
-        overflow: hidden;
+    display: none;
     }
     .header-top > .container{
         width: 100%;
@@ -704,16 +695,7 @@ input[type="checkbox"]:checked + label .checkbox-span{
     }
     .nav-link{
         list-style: none; 
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        border: 0;
-        padding: 0;
-        white-space: nowrap;
-        clip-path: inset(100%);
-        clip: rect(0 0 0 0);
-        overflow: hidden;
+        display: none;
     }
     .mobile-button{
         display: flex;
@@ -844,6 +826,9 @@ input[type="checkbox"]:checked + label .checkbox-span{
         width: 100%;
         padding: 12px;
     }
+    .nav-link{
+        display: flex;
+    }
     .menu{
         display: flex;
     }
@@ -870,18 +855,7 @@ input[type="checkbox"]:checked + label .checkbox-span{
               
         flex-basis: calc((100% - 72px) / 2);
     }
-    .features-img{
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        border: 0;
-        padding: 0;
-        white-space: nowrap;
-        clip-path: inset(100%);
-        clip: rect(0 0 0 0);
-        overflow: hidden;
-    }
+ 
     .team-list{
         gap: 64;;
         flex-wrap: wrap;
@@ -915,7 +889,7 @@ input[type="checkbox"]:checked + label .checkbox-span{
         flex-direction: row;
     }
     .features-img{
-        
+        display: flex;
     }
     .features-list li{
         flex-basis: calc((100% - 72px) / 4);
